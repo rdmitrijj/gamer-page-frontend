@@ -1,0 +1,15 @@
+@font-face {
+    font-family: myFont;
+    src: url(assets/fonts/jetbrains-mono/jetbrains-mono-variable.ttf)
+}
+
+body {
+    color: white;
+    font-family: myFont;
+    background-color: #06090E;
+}
+
+
+main {
+    display: grid;
+}

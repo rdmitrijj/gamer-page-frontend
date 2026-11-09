@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet">
+  <title>Gamer sign-up form</title>
+</head>
+<body>
+
+  <!-- Brand column starts -->
+
+  <!-- NEONCORE logo -->
+  <div class="left-container">
+    <main>
+    <section>
+    <h1>// Join the nexus</h1>
+    <p>Initialize your NEONCORE identity</p>
+    </section>
+
+
+    <!-- Dynamic: ready count, then "Provisioned" after success -->
+  <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
+    <section>
+      <p>Operator ID [0]/5 ready</p>
+      <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->
+      <h2>Unassigned</h2>
+      <dl>
+        <dt>Callsign</dt>
+        <dd>Pending</dd>
+
+        <dt>Email</dt>
+        <dd>Pending</dd>
+
+        <dt>Password</dt>
+        <dd>Pending</dd>
+
+        <dt>Confirm</dt>
+        <dd>Pending</dd>
+
+        <dt>Terms</dt>
+        <dd>Pending</dd>
+      </dl>
+    </section>
+    
+  <!-- Dynamic: row statuses -->
+  <!-- Pending
+  Required
+  OK
+  Locked -->
+
+
+  <!-- Dynamic: fault codes shown on a row when its field has an error -->
+  Missing
+  Too short
+  Too long
+  Bad character
+  Malformed
+  Mismatch
+  </div>
+  <!-- Brand column ends -->
+
+  <!-- Sign-up form starts -->
+  <div class="right-container">
+    <form>
+      <h2> New operator
+    All fields required
+    <!-- Mobile -->
+    <!-- All required -->
+      </h2> 
+    <label>> Callsign
+    <input placeholder="e.g. Vortex_07">
+    </label>
+
+    3–20 characters: letters, numbers, _ or -
+    Enter a callsign
+    Use at least 3 characters
+    Use 20 characters or fewer
+    Use letters, numbers, _ or - only
+
+    <label>> Email
+    <input placeholder="you@example.com">
+    </label>
+    Enter your email
+    Enter a valid email, like you@example.com
+
+    <label>> Password
+      <input id="password" type="password">
+    </label> 
+    <!-- Show / hide password button -->
+    At least 8 characters
+    <!-- Dynamic: password strength -->
+    Weak
+    Fair
+    Good
+    Strong
+    Enter a password
+    Use at least 8 characters
+
+     <label>> Confirm password
+      <input id="password" type="password">
+    </label>
+    <!-- Show / hide password button -->
+    Confirm your password
+    Passwords don't match
+    <label>
+    <input type="checkbox">
+    I accept the Terms and Privacy Policy
+    Accept the terms to continue
+    </label>
+    <button type="submit">Initialize account</button>
+    <!-- Loading -->
+    Transmitting_
+
+    Already an operator? Log in
+
+    <!-- Sign-up form ends -->
+
+    <!-- Success view starts -->
+
+    // Handshake complete
+    Operator [callsign] provisioned. Your account is ready.
+    Continue to log in
+    </form>
+    </main>
+  </div>
+  <!-- Success view ends -->
+  <script src="main.js" defer></script>
+</body>
+</html>
