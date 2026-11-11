@@ -13,3 +13,7 @@ body {
 main {
     display: grid;
 }
+
+input {
+    color: yellow;
+}
