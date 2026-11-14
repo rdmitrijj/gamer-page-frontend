@@ -13,10 +13,10 @@
   <!-- Brand column starts -->
 
   <!-- NEONCORE logo -->
+<main>
   <div class="left-container">
-    <main>
     <section>
-    <h1>// Join the nexus</h1>
+    <h1><span class="highlight">// </span> Join the nexus</h1>
     <p>Initialize your NEONCORE identity</p>
     </section>
 
@@ -65,67 +65,78 @@
   <!-- Sign-up form starts -->
   <div class="right-container">
     <form>
-      <h2> New operator
-    All fields required
-    <!-- Mobile -->
-    <!-- All required -->
-      </h2> 
-    <label>> Callsign
-    <input placeholder="e.g. Vortex_07">
+      <div class="form-header">
+      <h2>New operator</h2><h2><span class="darker-light">All fields required</span></h2>
+    </div>
+    <label>
+      <span>
+        <h3><span class="highlight">></span> Callsign</h3>
+      </span>
+    <input class="inline-input" placeholder="e.g. Vortex_07">
+    <span class="hint-text">3–20 characters: letters, numbers, _ or -</span>
     </label>
-
-    3–20 characters: letters, numbers, _ or -
-    Enter a callsign
+    <!-- Enter a callsign
     Use at least 3 characters
     Use 20 characters or fewer
-    Use letters, numbers, _ or - only
+    Use letters, numbers, _ or - only --->
 
-    <label>> Email
-    <input placeholder="you@example.com">
+    <label>
+      <span>
+        <h3><span class="highlight">></span> Email</h3>
+      </span>
+    <input class="inline-input" placeholder="you@example.com">
     </label>
-    Enter your email
-    Enter a valid email, like you@example.com
+    <!-- Enter your email
+    Enter a valid email, like you@example.com -->
 
-    <label>> Password
-      <input id="password" type="password">
+    <label>
+      <span>
+        <h3><span class="highlight">></span> Password</h3>
+      </span>
+      <input class="inline-input" id="password" type="password">
+      <span class="hint-text">At least 8 characters</span>
     </label> 
     <!-- Show / hide password button -->
-    At least 8 characters
     <!-- Dynamic: password strength -->
-    Weak
+    <!-- Weak
     Fair
     Good
     Strong
     Enter a password
-    Use at least 8 characters
+    Use at least 8 characters -->
 
-     <label>> Confirm password
-      <input id="password" type="password">
+     <label>
+      <span>
+        <h3><span class="highlight">></span> Confirm password</h3>
+      </span>
+      <input class="inline-input" id="password" type="password">
     </label>
     <!-- Show / hide password button -->
-    Confirm your password
-    Passwords don't match
-    <label>
-    <input type="checkbox">
-    I accept the Terms and Privacy Policy
-    Accept the terms to continue
+    <!-- Confirm your password
+    Passwords don't match -->
+    <div class="form-footer">
+    <label class="cbox-block">
+    <h3><input class="checkbox" type="checkbox">I accept the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</h3>
+    <!-- Accept the terms to continue -->
     </label>
-    <button type="submit">Initialize account</button>
+    <label>
+      <button type="submit">Initialize account</button>
+    </label>
+
     <!-- Loading -->
-    Transmitting_
-
-    Already an operator? Log in
-
+    <!-- Transmitting_ -->
+    <h3>Already an operator? <a href="">Log in</a></h3>
+    </div>
     <!-- Sign-up form ends -->
 
     <!-- Success view starts -->
 
-    // Handshake complete
+    <!-- // Handshake complete
     Operator [callsign] provisioned. Your account is ready.
-    Continue to log in
+    Continue to log in -->
     </form>
-    </main>
   </div>
+</main>
   <!-- Success view ends -->
   <script src="main.js" defer></script>
 </body>

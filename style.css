@@ -1,19 +1,124 @@
 @font-face {
-    font-family: myFont;
+    font-family: "JetBrains Mono";
     src: url(assets/fonts/jetbrains-mono/jetbrains-mono-variable.ttf)
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(assets/fonts/orbitron/orbitron-variable.ttf);
 }
 
 body {
     color: #E1EBF5;
-    font-family: myFont;
+    font-family: "JetBrains Mono", monospace;
     background-color: #06090E;
 }
 
-
-main {
-    display: grid;
+h1, h2, h3 {
+    letter-spacing: 3px;
+    font-family: "Orbitron", monospace;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
+
+h3 {
+    letter-spacing: 2px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8d969f;
+    margin: 20px 0 7px 0;
+}
+
+main {
+    display: flex;
+}
+
+.right-container {
+    max-width: 400px;
+    padding: 40px;
+    background-color: #0B121A;
+    border: 1px solid #464d54;
+}
+
+label {
+    display: grid;
+
+}
+.hint-text {
+    color: #8d969f;
+    font-size:13px;
+    margin: 5px 0 0 0;
+}
 input {
-    color: yellow;
+    background-color: #06090E;
+    border: 1px solid #576068;
+    color: #E1EBF5;
+    font-size: 15px;
+    font-family: "JetBrains Mono", monospace;
+    padding: 12px;
+}
+
+input:focus {
+    border: 1px solid #BEF538;
+}
+.cbox-block {
+    display: flex;
+    justify-items: center;
+}
+.checkbox {
+    appearance: none;
+    background-color: #06090E;
+    border: 1px solid #576068;
+    color: #E1EBF5;
+    cursor: pointer;
+}
+
+button {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: #BEF538;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover {
+    filter: drop-shadow(5px 5px #BEF538);
+    background-color: #F3F8FC;
+}
+
+
+.highlight {
+    color: #C2F639;
+}
+.darker-light {
+    color:#8d969f;
+}
+
+.form-header {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #464d54;
+}
+.form-header h2 {
+    letter-spacing: 1.5px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.form-footer h3 {
+    margin: 20px 0 20px 0;
+    letter-spacing: 0;
+    text-transform: none;
+    text-align: center;
+}
+a {
+    color: #BEF538;
+    text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
 }
