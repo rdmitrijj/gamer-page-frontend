@@ -15,16 +15,17 @@
   <!-- NEONCORE logo -->
 <main>
   <div class="left-container">
-    <section>
+    <section class="main-heading">
+      <img src="assets/images/logo.svg">
     <h1><span class="highlight">// </span> Join the nexus</h1>
-    <p>Initialize your NEONCORE identity</p>
+    <p class="hint-text">Initialize your NEONCORE identity</p>
     </section>
 
 
     <!-- Dynamic: ready count, then "Provisioned" after success -->
   <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
     <section>
-      <p>Operator ID [0]/5 ready</p>
+      <p class="under-main-header"><span>Operator ID</span> <span>0/5 ready</span></p>
       <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->
       <h2>Unassigned</h2>
       <dl>
@@ -53,12 +54,12 @@
 
 
   <!-- Dynamic: fault codes shown on a row when its field has an error -->
-  Missing
+  <!-- Missing
   Too short
   Too long
   Bad character
   Malformed
-  Mismatch
+  Mismatch -->
   </div>
   <!-- Brand column ends -->
 
@@ -116,7 +117,8 @@
     Passwords don't match -->
     <div class="form-footer">
     <label class="cbox-block">
-    <h3><input class="checkbox" type="checkbox">I accept the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</h3>
+      <input class="checkbox" type="checkbox">
+      <h3>I accept the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</h3>
     <!-- Accept the terms to continue -->
     </label>
     <label>
