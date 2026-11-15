@@ -223,7 +223,7 @@ dd {
     align-items: center;;
     position: relative;
 }
-.password-eye {
+.password-eye-1 {
     width:30px;
     height: 30px;
     background-image: url("assets/images/icon-eye.svg");
@@ -234,7 +234,23 @@ dd {
     position: absolute;
     right: 10px;
 }
-.passsword-eye:checked {
+
+.password-eye-2 {
+    width:30px;
+    height: 30px;
+    background-image: url("assets/images/icon-eye.svg");
+    background-position: center;
+    border: transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+}
+
+.password-eye-1.passcheck {
     background-image: url("assets/images/icon-eye-off.svg");
 }
 
+.password-eye-2.passcheck {
+    background-image: url("assets/images/icon-eye-off.svg");
+}
