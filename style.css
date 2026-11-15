@@ -92,8 +92,8 @@ input {
     padding: 12px;
 }
 
-input:focus {
-    border: 1px solid #BEF538;
+input:focus-visible {
+    outline: 2px solid #BEF538;
 }
 .cbox-block {
     display: flex;
@@ -110,22 +110,28 @@ input:focus {
     width: 15px;
     height: 15px;
 }
-.checkbox:active {
-    background-image: image(url("logo.svg"));
+.checkbox:checked {
+    transition: 0.25s;
+    background-color: #BEF538;
+    background-image: url("assets/images/icon-tick-16.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-
 button {
+    cursor: pointer;
+}
+
+.submit-button {
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     background-color: #BEF538;
     height: 40px;
-    cursor: pointer;
     transition: 0.4s;
 }
-button:hover {
+.submit-button:hover {
     filter: drop-shadow(5px 5px #BEF538);
     background-color: #F3F8FC;
 }
@@ -212,3 +218,23 @@ dt::after {
 dd {
   margin: 0 0 0 12px;    /* clears the default indent, adds space between the line and the value */
 }
+.pass-wrapper {
+    display: grid;
+    align-items: center;;
+    position: relative;
+}
+.password-eye {
+    width:30px;
+    height: 30px;
+    background-image: url("assets/images/icon-eye.svg");
+    background-position: center;
+    border: transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+}
+.passsword-eye:checked {
+    background-image: url("assets/images/icon-eye-off.svg");
+}
+
