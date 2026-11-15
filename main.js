@@ -45,6 +45,9 @@ let termsStatus = document.getElementById("terms-status")
 let counterDisplay = document.getElementById("confirm-counter")
 let validCount = 0
 
+let hintTextWrapper = document.querySelector(".hintTextWrapper")
+let callsignHintText = document.getElementById("callsign-hint")
+
 
 function ValidateForm() {
     validCount = 0
@@ -55,8 +58,12 @@ function ValidateForm() {
         callsignStatus.classList.remove('rightStatus')
         callsignStatus.textContent = "too short"
         
+        hintTextWrapper.classList.add('alerted')
+        callsignHintText.textContent = "Use at least 3 characters"
     }   
     else {
+        callsignHintText.textContent = "3–20 characters: letters, numbers, _ or -"
+        hintTextWrapper.classList.remove('alerted')
         callsignInput.classList.remove('wrongInput')
         callsignStatus.classList.remove('wrongStatus')
 
@@ -119,7 +126,7 @@ function ValidateForm() {
         passwordConfirmStatus.textContent = "ok"
         validCount++
     }
-
+  
 
 
 

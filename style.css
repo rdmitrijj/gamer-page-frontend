@@ -57,11 +57,7 @@ label {
     display: grid;
 
 }
-.hint-text {
-    color: #8d969f;
-    font-size:13px;
-    margin: 5px 0 0 0;
-}
+
 .left-container {
     padding-right: 80px;
     max-width: 650px;
@@ -267,3 +263,36 @@ dd {
     background-image: url("assets/images/icon-eye-off.svg");
 }
 
+.hintTextWrapper {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+.hint-text {
+    color: #8d969f;
+    font-size:13px;
+    margin: 0 0 0 0;
+}
+
+.alert-sign {
+    display:none;
+}
+
+.hintTextWrapper.alerted {
+    color: #FF827E;
+}
+
+.hintTextWrapper.alerted .hint-text {
+    color: #FF827E;
+    font-size:13px;
+    margin: 0 0 0 5px;
+}
+
+.hintTextWrapper.alerted .alert-sign {
+    display:flex;
+}
+
+.hintTextWrapper.alerted #callsign-hint{
+    
+
+}
