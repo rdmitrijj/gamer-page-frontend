@@ -95,6 +95,18 @@ input {
 input:focus-visible {
     outline: 2px solid #BEF538;
 }
+
+input.wrongInput {
+    border: 2px solid #FF827E;
+}
+
+.wrongStatus {
+    color: #FF827E;
+}
+.rightStatus {
+    color: #E1EBF5;
+}
+
 .cbox-block {
     display: flex;
     align-items: center;
@@ -254,3 +266,4 @@ dd {
 .password-eye-2.passcheck {
     background-image: url("assets/images/icon-eye-off.svg");
 }
+

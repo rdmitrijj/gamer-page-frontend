@@ -30,10 +30,10 @@
       <h2>Unassigned</h2>
       <dl>
         <dt>Callsign</dt>
-        <dd>Pending</dd>
+        <dd id="callsign-status">Pending</dd>
 
         <dt>Email</dt>
-        <dd>Pending</dd>
+        <dd id="email-status">Pending</dd>
 
         <dt>Password</dt>
         <dd>Pending</dd>
@@ -42,7 +42,7 @@
         <dd>Pending</dd>
 
         <dt>Terms</dt>
-        <dd>Pending</dd>
+        <dd id="terms-status">Required</dd>
       </dl>
     </section>
     
@@ -65,7 +65,7 @@
 
   <!-- Sign-up form starts -->
   <div class="right-container">
-    <form>
+    <form name="loginForm">
       <div class="form-header">
       <h2>New operator</h2><h2><span class="darker-light">All fields required</span></h2>
     </div>
@@ -73,7 +73,7 @@
       <span>
         <h3><span class="highlight">></span> Callsign</h3>
       </span>
-    <input class="inline-input" placeholder="e.g. Vortex_07">
+    <input id="callsign" name="nickname" placeholder="e.g. Vortex_07">
     <span class="hint-text">3–20 characters: letters, numbers, _ or -</span>
     </label>
     <!-- Enter a callsign
@@ -85,7 +85,7 @@
       <span>
         <h3><span class="highlight">></span> Email</h3>
       </span>
-    <input class="inline-input" placeholder="you@example.com">
+    <input id="email" name="email" placeholder="you@example.com">
     </label>
     <!-- Enter your email
     Enter a valid email, like you@example.com -->
@@ -95,7 +95,7 @@
         <h3><span class="highlight">></span> Password</h3>
       </span>
       <div class="pass-wrapper">
-        <input class="inline-input" id="password-1" type="password"><button type="button" class="password-eye-1"></button>
+        <input name="password" id="password-1" type="password"><button type="button" class="password-eye-1"></button>
       </div>
       <span class="hint-text">At least 8 characters</span>
     </label> 
@@ -113,7 +113,7 @@
         <h3><span class="highlight">></span> Confirm password</h3>
       </span>
       <div class="pass-wrapper">
-        <input class="inline-input" id="password-2" type="password"><button type="button" class="password-eye-2"></button>
+        <input name="password-confirmation" id="password-2" type="password"><button type="button" class="password-eye-2"></button>
       </div>
     </label>
     <!-- Show / hide password button -->
@@ -121,12 +121,12 @@
     Passwords don't match -->
     <div class="form-footer">
     <label class="cbox-block">
-      <input class="checkbox" type="checkbox">
+      <input name="terms" class="checkbox" type="checkbox">
       <h3>I accept the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</h3>
     <!-- Accept the terms to continue -->
     </label>
     <label>
-      <button class="submit-button" type="submit">Initialize account</button>
+      <button id="submitButton" class="submit-button" type="button">Initialize account</button>
     </label>
 
     <!-- Loading -->
