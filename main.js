@@ -29,43 +29,113 @@ function passCheck(element) {
     }
 }
 
+let callsignInput = document.getElementById("callsign")
+let callsignStatus = document.getElementById("callsign-status")
+
+let emailInput = document.getElementById("email")
+let emailStatus = document.getElementById("email-status")
+
+let passwordStatus = document.getElementById("password-status")
+
+let passwordConfirmStatus = document.getElementById("password-confirm-status")
+
+let termsStatus = document.getElementById("terms-status")
 
 
+let counterDisplay = document.getElementById("confirm-counter")
+let validCount = 0
 
-let counter = 0
 
 function ValidateForm() {
-    if (document.forms["loginForm"]["nickname"].value == "") {
-        document.getElementById("callsign").classList.add('wrongInput')
-        document.getElementById("callsign-status").classList.add('wrongStatus')
-        document.getElementById("callsign-status").classList.remove('rightStatus')
-        document.getElementById("callsign-status").textContent = "too short"
+    validCount = 0
+    if ((document.forms["loginForm"]["nickname"].value).length < 3) {
+        callsignInput.classList.add('wrongInput')
+        callsignStatus.classList.add('wrongStatus')
+
+        callsignStatus.classList.remove('rightStatus')
+        callsignStatus.textContent = "too short"
         
     }   
     else {
-        document.getElementById("callsign").classList.remove('wrongInput')
-        document.getElementById("callsign-status").classList.remove('wrongStatus')
-        document.getElementById("callsign-status").classList.add('rightStatus')
-        document.getElementById("callsign-status").textContent = "ok"
-        counter++
+        callsignInput.classList.remove('wrongInput')
+        callsignStatus.classList.remove('wrongStatus')
+
+        callsignStatus.classList.add('rightStatus')
+        callsignStatus.textContent = "ok"
+        validCount++
     }
 
 
     if (document.forms["loginForm"]["email"].value == "") {
-        document.getElementById("email").classList.add('wrongInput')
-        document.getElementById("email-status").classList.add('wrongStatus')
-        document.getElementById("email-status").textContent = "malformed"
-    }
-    if (document.forms["loginForm"]["terms"].checked !== true) {
-        document.getElementById("terms-status").classList.remove('rightStatus')
-        document.getElementById("terms-status").classList.add('wrongStatus')
-        document.getElementById("terms-status").textContent = "required"
+        emailInput.classList.add('wrongInput')
+        emailStatus.classList.add('wrongStatus')
+        emailStatus.classList.remove('rightStatus')
+
+        emailStatus.textContent = "malformed"
     }
     else {
-        document.getElementById("terms-status").classList.remove('wrongStatus')
-        document.getElementById("terms-status").classList.add('rightStatus')
-        document.getElementById("terms-status").textContent = "ok"
+        emailStatus.classList.remove('wrongStatus')
+        emailInput.classList.remove('wrongInput')
+
+        emailStatus.classList.add('rightStatus')
+        emailStatus.textContent = "ok"
+        validCount++
     }
+
+    if ((document.forms["loginForm"]["password-1"].value).length < 8) {
+        passwordInput_1.classList.remove('rightInput')
+        passwordStatus.classList.remove('rightStatus')
+
+        passwordInput_1.classList.add('wrongInput')
+        passwordStatus.classList.add('wrongStatus')
+        passwordStatus.textContent = "too short"
+    }
+    else {
+        passwordInput_1.classList.remove('wrongInput')
+        passwordStatus.classList.remove('wrongStatus')
+
+        passwordInput_1.classList.add('rightInput')
+        passwordStatus.classList.add('rightStatus')
+        passwordStatus.textContent = "ok"
+        validCount++
+    }
+
+    if (document.forms["loginForm"]["password-2"].value !== document.forms["loginForm"]["password-1"].value 
+        || document.forms["loginForm"]["password-2"].value === "" ) {
+        passwordInput_2.classList.remove('rightInput')
+        passwordConfirmStatus.classList.remove('rightStatus')
+
+        passwordInput_2.classList.add('wrongInput')
+        passwordConfirmStatus.classList.add('wrongStatus')
+        passwordConfirmStatus.textContent = "mismatch"
+
+    }
+    else {
+        passwordInput_2.classList.add('rightInput')
+        passwordConfirmStatus.classList.add('rightStatus')
+
+        passwordInput_2.classList.remove('wrongInput')
+        passwordConfirmStatus.classList.remove('wrongStatus')
+        passwordConfirmStatus.textContent = "ok"
+        validCount++
+    }
+
+
+
+
+    if (document.forms["loginForm"]["terms"].checked !== true) {
+        termsStatus.classList.remove('rightStatus')
+
+        termsStatus.classList.add('wrongStatus')
+        termsStatus.textContent = "required"
+    }
+    else {
+        termsStatus.classList.remove('wrongStatus')
+
+        termsStatus.classList.add('rightStatus')
+        termsStatus.textContent = "ok"
+        validCount++
+    }
+    counterDisplay.textContent = validCount
 }
 
-console.log(document.forms["loginForm"]["terms"].checked)
