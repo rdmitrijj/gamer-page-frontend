@@ -294,3 +294,7 @@ dd {
 .hintTextWrapper.alerted .alert-sign {
     display:flex;
 }
+
+#ready-counter.isready {
+    color: #BEF538;
+}

@@ -41,9 +41,11 @@ let passwordConfirmStatus = document.getElementById("password-confirm-status")
 
 let termsStatus = document.getElementById("terms-status")
 
-
+let readyCounter = document.getElementById("ready-counter")
 let counterDisplay = document.getElementById("confirm-counter")
 let validCount = 0
+
+
 
 let hintTextWrapper = document.querySelector(".hintTextWrapper")
 let callsignHintText = document.getElementById("callsign-hint")
@@ -144,5 +146,12 @@ function ValidateForm() {
         validCount++
     }
     counterDisplay.textContent = validCount
+
+    if (counterDisplay.textContent === "5") {
+        readyCounter.classList.add("isready")
+    }
+    else {
+        readyCounter.classList.remove("isready")
+    }
 }
 
