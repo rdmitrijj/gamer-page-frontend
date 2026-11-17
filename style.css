@@ -41,6 +41,9 @@ main {
     align-items: center;
     justify-content: center;
     height: 98vh;
+    background: url(assets/images/pattern-backdrop.svg);
+    background-repeat: no-repeat;
+    background-position: 1400px;
 }
 
 .right-container {
@@ -88,7 +91,7 @@ input {
     padding: 12px;
 }
 
-input:focus-visible {
+:focus-visible {
     outline: 2px solid #BEF538;
 }
 
@@ -290,9 +293,4 @@ dd {
 
 .hintTextWrapper.alerted .alert-sign {
     display:flex;
-}
-
-.hintTextWrapper.alerted #callsign-hint{
-    
-
 }
