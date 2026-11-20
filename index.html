@@ -101,9 +101,9 @@
       </span>
       <div class="pass-wrapper">
         <input name="password" id="password-1" type="password"><button type="button" class="password-eye-1"></button>
+        </div>
       <div class="hintTextWrapper">
         <img class="alert-sign" src="assets/images/icon-alert.svg"><span id="password-hint" class="hint-text">At least 8 characters</span>
-      </div>
       </div>
 
     </label> 
@@ -123,15 +123,20 @@
       <div class="pass-wrapper">
         <input name="password-confirmation" id="password-2" type="password"><button type="button" class="password-eye-2"></button>
       </div>
+      <div class="hintTextWrapper">
+        <img class="alert-sign" src="assets/images/icon-alert.svg"><span id="passwordConfirmation-hint" class="hint-text"></span>
+      </div>
     </label>
     <!-- Show / hide password button -->
     <!-- Confirm your password
     Passwords don't match -->
     <div class="form-footer">
     <label class="cbox-block">
-      <input name="terms" class="checkbox" type="checkbox">
-      <h3>I accept the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</h3>
-    <!-- Accept the terms to continue -->
+      <input name="terms" class="checkbox" id="checkbox" type="checkbox">
+      <h3 style="margin: 0px">I accept the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</h3>
+      <div class="hintTextWrapper">
+        <img class="alert-sign" src="assets/images/icon-alert.svg"><span id="termsandprivacy-hint" class="hint-text"></span>
+      </div>
     </label>
     <label>
       <button id="submitButton" class="submit-button" type="button">Initialize account</button>

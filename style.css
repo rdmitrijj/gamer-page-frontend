@@ -47,7 +47,7 @@ main {
 }
 
 .right-container {
-    min-width: 400px;
+    width: 400px;
     padding: 40px;
     background-color: #0B121A;
     border: 1px solid #464d54;
@@ -109,8 +109,12 @@ input.wrongInput {
 .cbox-block {
     display: flex;
     align-items: center;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0 15px 0;
 }
+
+
 
 .checkbox {
     appearance: none;
@@ -120,6 +124,7 @@ input.wrongInput {
     cursor: pointer;
     width: 15px;
     height: 15px;
+    margin-left: 0px;
 }
 .checkbox:checked {
     transition: 0.25s;
@@ -181,6 +186,10 @@ button {
     text-transform: none;
     text-align: center;
 }
+.form-footer {
+    margin: 0px;
+}
+
 a {
     color: #BEF538;
     text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
@@ -281,14 +290,20 @@ dd {
     display:none;
 }
 
-.hintTextWrapper.alerted {
-    color: #FF827E;
+.checkbox.alerted {
+    border-color: #FF827E;
 }
-
+.hintTextWrapper span {
+    height: 16px;
+    line-height: 14.5px;
+}
 .hintTextWrapper.alerted .hint-text {
+    display: flex;
     color: #FF827E;
     font-size:13px;
-    margin: 0 0 0 5px;
+    margin: 0 0 0 6px;
+    align-items: flex-end;
+    border-color: #FF827E;
 }
 
 .hintTextWrapper.alerted .alert-sign {

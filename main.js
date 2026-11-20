@@ -51,6 +51,10 @@ let hintTextWrapper = document.querySelectorAll(".hintTextWrapper")
 let callsignHintText = document.getElementById("callsign-hint")
 let emailHintText = document.getElementById("email-hint")
 let passwordHintText = document.getElementById("password-hint")
+let passworConfHintText = document.getElementById("passwordConfirmation-hint")
+let termsPrivacyHintText = document.getElementById("termsandprivacy-hint")
+let checkbox = document.getElementById("checkbox")
+
 
 function ValidateForm() {
     validCount = 0
@@ -112,7 +116,7 @@ function ValidateForm() {
         passwordHintText.textContent = "Use at least 8 characters"
     }
     else {
-        passwordHintText.textContent = ""
+        passwordHintText.textContent = "At least 8 characters"
         hintTextWrapper[2].classList.remove("alerted")
         passwordInput_1.classList.remove('wrongInput')
         passwordStatus.classList.remove('wrongStatus')
@@ -128,15 +132,22 @@ function ValidateForm() {
         passwordInput_2.classList.remove('rightInput')
         passwordConfirmStatus.classList.remove('rightStatus')
 
+        hintTextWrapper[3].classList.add("alerted")
+        passworConfHintText.textContent = "Passwords don't match"
+
         passwordInput_2.classList.add('wrongInput')
         passwordConfirmStatus.classList.add('wrongStatus')
         passwordConfirmStatus.textContent = "mismatch"
 
     }
     else {
+
+
         passwordInput_2.classList.add('rightInput')
         passwordConfirmStatus.classList.add('rightStatus')
 
+        passworConfHintText.textContent = ""
+        hintTextWrapper[3].classList.remove("alerted")
         passwordInput_2.classList.remove('wrongInput')
         passwordConfirmStatus.classList.remove('wrongStatus')
         passwordConfirmStatus.textContent = "ok"
@@ -151,10 +162,18 @@ function ValidateForm() {
 
         termsStatus.classList.add('wrongStatus')
         termsStatus.textContent = "required"
+
+        hintTextWrapper[4].classList.add("alerted")
+        termsPrivacyHintText.textContent = "Accept the terms to continue"
+        checkbox.classList.add("alerted")
     }
     else {
+        termsPrivacyHintText.textContent = ""
         termsStatus.classList.remove('wrongStatus')
+        checkbox.classList.remove("alerted")
 
+        hintTextWrapper[4].classList.remove("alerted")
+        
         termsStatus.classList.add('rightStatus')
         termsStatus.textContent = "ok"
         validCount++
