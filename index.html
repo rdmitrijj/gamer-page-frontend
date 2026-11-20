@@ -88,6 +88,9 @@
         <h3><span class="highlight">></span> Email</h3>
       </span>
     <input id="email" name="email" placeholder="you@example.com">
+    <div class="hintTextWrapper">
+        <img class="alert-sign" src="assets/images/icon-alert.svg"><span id="email-hint" class="hint-text"></span>
+    </div>
     </label>
     <!-- Enter your email
     Enter a valid email, like you@example.com -->
@@ -98,8 +101,11 @@
       </span>
       <div class="pass-wrapper">
         <input name="password" id="password-1" type="password"><button type="button" class="password-eye-1"></button>
+      <div class="hintTextWrapper">
+        <img class="alert-sign" src="assets/images/icon-alert.svg"><span id="password-hint" class="hint-text">At least 8 characters</span>
       </div>
-      <span class="hint-text">At least 8 characters</span>
+      </div>
+
     </label> 
     <!-- Show / hide password button -->
     <!-- Dynamic: password strength -->

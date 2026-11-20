@@ -47,9 +47,10 @@ let validCount = 0
 
 
 
-let hintTextWrapper = document.querySelector(".hintTextWrapper")
+let hintTextWrapper = document.querySelectorAll(".hintTextWrapper")
 let callsignHintText = document.getElementById("callsign-hint")
-
+let emailHintText = document.getElementById("email-hint")
+let passwordHintText = document.getElementById("password-hint")
 
 function ValidateForm() {
     validCount = 0
@@ -60,12 +61,12 @@ function ValidateForm() {
         callsignStatus.classList.remove('rightStatus')
         callsignStatus.textContent = "too short"
         
-        hintTextWrapper.classList.add('alerted')
+        hintTextWrapper[0].classList.add('alerted')
         callsignHintText.textContent = "Use at least 3 characters"
     }   
     else {
         callsignHintText.textContent = "3–20 characters: letters, numbers, _ or -"
-        hintTextWrapper.classList.remove('alerted')
+        hintTextWrapper[0].classList.remove('alerted')
         callsignInput.classList.remove('wrongInput')
         callsignStatus.classList.remove('wrongStatus')
 
@@ -81,6 +82,10 @@ function ValidateForm() {
         emailStatus.classList.remove('rightStatus')
 
         emailStatus.textContent = "malformed"
+
+        hintTextWrapper[1].classList.add('alerted')
+        emailHintText.textContent = "Enter a valid email, like 'you@example.com'"
+
     }
     else {
         emailStatus.classList.remove('wrongStatus')
@@ -88,6 +93,10 @@ function ValidateForm() {
 
         emailStatus.classList.add('rightStatus')
         emailStatus.textContent = "ok"
+
+        hintTextWrapper[1].classList.remove('alerted')
+        emailHintText.textContent = ""
+
         validCount++
     }
 
@@ -98,8 +107,13 @@ function ValidateForm() {
         passwordInput_1.classList.add('wrongInput')
         passwordStatus.classList.add('wrongStatus')
         passwordStatus.textContent = "too short"
+
+        hintTextWrapper[2].classList.add("alerted")
+        passwordHintText.textContent = "Use at least 8 characters"
     }
     else {
+        passwordHintText.textContent = ""
+        hintTextWrapper[2].classList.remove("alerted")
         passwordInput_1.classList.remove('wrongInput')
         passwordStatus.classList.remove('wrongStatus')
 
@@ -154,4 +168,3 @@ function ValidateForm() {
         readyCounter.classList.remove("isready")
     }
 }
-
