@@ -1,5 +1,6 @@
 # Frontend Mentor - Gamer sign-up form
 
+It's my training 
 
 ![Design preview for the Gamer sign-up form coding challenge](./preview.jpg)
 
